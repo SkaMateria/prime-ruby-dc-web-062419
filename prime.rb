@@ -1,9 +1,8 @@
 def prime?(num)
-  if num <= 1
-    return false
-  elsif num == 2
-    true
-  else
-    (2..n/2).none? { |i| n % i == 0}
+  return false if num <= 1
+  myArr = 2..(num**0.5)
+  myArr.each do |i|
+    return false if num % i == 0
   end
+  true
 end
